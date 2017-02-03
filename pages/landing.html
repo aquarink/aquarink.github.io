@@ -7,12 +7,12 @@
                 <form class="form-group">
                     <div class="input-group">
                         <div class="input-group-addon">Rp.</div>
-                        <input type="text" class="form-control" id="exampleInputAmount" placeholder="Pendapatan Sebulan">
+                        <input ng-model="pendapatan" type="text" class="form-control" id="pendapatan" placeholder="Pendapatan Sebulan">
                         <div class="input-group-addon">/bulan</div>
                     </div>
                 </form>
             </div>
-            <div class="panel-footer">Hasil</div>
+            <div class="panel-footer" style="font-weight: bold;">Zakat Dikeluarkan Rp.{{(pendapatan*2.5)/100 | number}}/bulan</div>
         </div>
         <br>
         <div class="panel panel-info">
