@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="amalApp">
+<html ng-app="adminRegisterApp">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,23 +14,21 @@
     <script src="angularjs/angularjs-core/ui-bootstrap-tpls-2.5.0.min.js"></script>
 
     <!-- Angularjs App-->
-    <script src="angularjs/angularjs-app/angular-amal-app.js"></script>
-    <script src="angularjs/angularjs-app/angular-admin-amal-app.js"></script>
+    <script src="angularjs/angularjs-app/angular-adminRegister-amal-app.js"></script>
 
     <!-- Angularjs Controller-->
     <!-- <script src="angularjs/angularjs-controller/"></script> -->
-    <script src="angularjs/angularjs-controller/admin-controller.js"></script>
 
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="bootstrap/css/bootstrap-costumize.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-costumize-admin.css" rel="stylesheet">
 
     <!-- jQuery UI -->
     <!-- <link href="" rel="stylesheet"> -->
 </head>
 <body style="background-color: #d4d4d4">
 
-    <nav ng-hide="currentPath === '/admin-login'" class="navbar navbar-default navbar-fixed-top" style="font-weight: bold;" ng-controller="NavClass">
+    <nav class="navbar navbar-default navbar-fixed-top" style="font-weight: bold;">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -54,10 +52,10 @@
                     <li ng-class="{active:isActive('/tentang')}"><a href="#"><i class="glyphicon glyphicon-bullhorn"></i> Tentang Kami</a></li>
                     <li ng-class="{active:isActive('/tentang')}"><a href="#"><i class="glyphicon glyphicon-map-marker"></i> Kontak</a></li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Tambah User</a></li>
+                            <li><a href="#">Data User</a></li>
                             <li><a href="#">Something else here</a></li>
                             <li role="separator" class="divider"></li>
                             <li class="dropdown-header">Nav header</li>
@@ -70,6 +68,7 @@
         </div>
     </nav>
 
+    <!-- <div style="margin-top: 70px" ng-view></div> -->
     <div style="margin-top: 70px" ng-view></div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

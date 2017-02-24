@@ -1,4 +1,4 @@
-var amal = angular.module("amalApp", ['ngRoute', 'ngResource']);
+var amal = angular.module("amalApp", ['ngRoute', 'ngResource','ui.bootstrap']);
 
 amal.config(['$routeProvider',
     function ($routeProvider) {
@@ -13,9 +13,7 @@ amal.config(['$routeProvider',
                 templateUrl: 'pages/masjid.html',
                 title: 'Masjid | #BeramalMembersihkanRezeki'
             }).
-
-
-
+            
             when('/404', {
                 templateUrl: 'pages/404.html',
                 title: 'Halaman Tidak Ditemukan Error 404 | #BeramalMembersihkanRezeki'
@@ -50,4 +48,6 @@ amal.controller('NavClass', function ($scope, $location) {
     $scope.isActive = function (viewLocation) {
         return viewLocation === $location.path();
     };
+
+    $scope.currentPath = $location.path();
 });
