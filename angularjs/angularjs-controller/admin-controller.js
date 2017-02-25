@@ -26,7 +26,7 @@ amal.controller('adminController', function ($scope, $http, $routeParams, $locat
     $scope.loginAdmin = function () {
         $http({
             method  : "POST",
-            url     : 'http://192.168.1.191:8000/api/login',
+            url     : itv +'api/login',
             data    : $.param({email: $scope.email, password : $scope.password}),
             headers : { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' }
         }).
@@ -58,7 +58,7 @@ amal.controller('adminController', function ($scope, $http, $routeParams, $locat
                 } else {
                     $scope.pesan = 'Nip atau Password Salah!';
                     $scope.passTxt = '';
-                    document.getElementById("inputPassword3").focus();
+                    document.getElementById("inputPassword").focus();
                 }
             }).
             error(function (data, status, header, config) {
